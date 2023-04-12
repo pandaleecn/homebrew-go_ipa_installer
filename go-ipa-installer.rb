@@ -10,6 +10,7 @@ class GoIpaInstaller < Formula
   depends_on "ideviceinstaller"
 
   def install
+    system "go", "build", "-o", "go_ipa_installer", "main.go" # Add this line to build the binary
     bin.install "go_ipa_installer"
   end
 
